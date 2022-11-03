@@ -1,3 +1,38 @@
 body {
   text-align: center;
+  justify-content: center;
+  align-content: center;
+}
+
+#results {
+  border: 2px solid red;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 30vw);
+  grid-gap: 2vw;
+}
+
+.titleName {
+  min-width: 20vw;
+  border: 2px solid green;
+  padding: 1vw;
+  margin: 1vw;
+}
+
+.authorName {
+  padding: 1vw;
+  margin: 1vw;
+  border: 2px black solid;
+}
+
+.pagesNum {
+  padding: 1vw;
+  margin: 1vw;
+  border: 2px black solid;
+}
+
+.readYet {
+  padding: 1vw;
+  margin: 1vw;
+  border: 2px black solid;
 }
