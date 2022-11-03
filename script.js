@@ -8,33 +8,38 @@ const myText = document.getElementById("authorText");
 const results = document.getElementById("results");
 
 inputBtn.addEventListener("click", e => {
-const titleName = document.createElement('div');
+const bookCard =document.createElement('div');
+    bookCard.classList.add('bookCard');
+
+    results.appendChild(bookCard);
+
+const titleName = document.createElement('p');
    titleName.classList.add('titleName');
    titleName.textContent =  'Title'
 
-   results.appendChild(titleName);
+   bookCard.appendChild(titleName);
 
-const authorName = document.createElement('div');
+const authorName = document.createElement('p');
    authorName.classList.add('authorName');
    authorName.textContent = `Author`;
 
-   titleName.appendChild(authorName);
+   bookCard.appendChild(authorName);
 
-const pagesNum = document.createElement('div');
+const pagesNum = document.createElement('p');
     pagesNum.classList.add('pagesNum');
-    pagesNum.textContent = '#';
+    pagesNum.textContent = '#s';
 
-    titleName.appendChild(pagesNum);
+    bookCard.appendChild(pagesNum);
 
-const readYet = document.createElement('div');
+const readYet = document.createElement('p');
     readYet.classList.add('readYet');
     readYet.textContent = 'Yes/No';
 
-    titleName.appendChild(readYet);
+    bookCard.appendChild(readYet);
 })
 
 const btn = document.querySelector('#btn');
-btn.onclick = () => alert("Hello World");
+btn.onclick = () => alert('Test');
 
 function addBookToLibrary() {
     

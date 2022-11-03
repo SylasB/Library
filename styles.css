@@ -10,6 +10,21 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 30vw);
   grid-gap: 2vw;
+  min-height: 30vh;
+}
+
+.bookCard {
+  min-width: 20vw;
+  border: 2px solid black;
+  padding: 1vw;
+  margin: 1vw;
+}
+
+.bookCard p {
+  min-width: 20vw;
+  border: 2px solid green;
+  padding: 1vw;
+  margin: 1vw;
 }
 
 .titleName {
