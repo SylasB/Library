@@ -4,7 +4,6 @@ function book(title, author, pages, read) {
 }
 
 const inputBtn = document.getElementById("authorBtn");
-const myText = document.getElementById("authorText");
 const results = document.getElementById("results");
 
 inputBtn.addEventListener("click", e => {
@@ -14,32 +13,34 @@ const bookCard =document.createElement('div');
     results.appendChild(bookCard);
 
 const titleName = document.createElement('p');
+    var userInputTitle = document.getElementById("bookTitle").value;
    titleName.classList.add('titleName');
-   titleName.textContent =  'Title'
+   titleName.textContent =  userInputTitle;
 
    bookCard.appendChild(titleName);
 
 const authorName = document.createElement('p');
+    var userInputAuthor = document.getElementById("authorText").value;
    authorName.classList.add('authorName');
-   authorName.textContent = `Author`;
+   authorName.textContent = userInputAuthor;
 
    bookCard.appendChild(authorName);
 
 const pagesNum = document.createElement('p');
+    var userInputNumPages = document.getElementById("numPages").value;
     pagesNum.classList.add('pagesNum');
-    pagesNum.textContent = '#s';
+    pagesNum.textContent = userInputNumPages + ' ' + 'pages';
 
     bookCard.appendChild(pagesNum);
 
-const readYet = document.createElement('p');
+const readYet = document.createElement('button');
     readYet.classList.add('readYet');
-    readYet.textContent = 'Yes/No';
+    readYet.textContent = 'Read'
+    
 
     bookCard.appendChild(readYet);
 })
 
-const btn = document.querySelector('#btn');
-btn.onclick = () => alert('Test');
 
 function addBookToLibrary() {
     
