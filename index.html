@@ -8,20 +8,29 @@
     <title>Library</title>
 </head>
 <body>
-    <h1>Welcome to your personal library</h1>
+    <header>
+        <h1>Welcome to your personal library</h1>
+    </header>
     <div class="createBookCard">
-        <label for="bookTitle">Title:</label>
-        <input id="bookTitle" type="text">
-
-        <label for="authorText">Author:</label>
-        <input id="authorText" type="text">
-
-        <label for="">Number of pages:</label>
-        <input id="numPages" type="number">
-
-        <button id="isReadBtn" value="Read" onclick="">Read</button>
-
-        <button id="authorBtn">Submit</button>
+        <div>
+            <label for="bookTitle">Title:</label>
+            <input id="bookTitle" type="text">
+        </div>
+        <div>
+            <label for="authorText">Author:</label>
+            <input id="authorText" type="text">
+        </div>
+        <div>
+            <label for="">Number of pages:</label>
+            <input id="numPages" type="number">
+        </div>
+        <!--To be determined if this button should be used-->
+        <!--<div>
+            <button id="isReadBtn" value="Read" onclick="">Read</button>
+        </div>-->
+        <div>
+            <button id="submitBtn">Submit</button>
+        </div>
     </div>
     <div id="results">
         

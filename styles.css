@@ -2,6 +2,50 @@ body {
   text-align: center;
   justify-content: center;
   align-content: center;
+  padding: 0px;
+  margin: 0px;
+}
+
+header {
+  width: 100vw;
+  height: 10vh;
+  background-color: bisque;
+  margin-top: 0px;
+  margin-left: 0px;
+  position: absolute;
+  top: 0;
+}
+
+.createBookCard {
+  border: 2px solid black;
+  justify-content: center;
+  display: grid;
+
+  grid-template-columns: repeat(1, 45vw);
+
+  margin-top: 11vh;
+}
+
+.createBookCard div {
+  text-align: center;
+  min-height: 5vh;
+  border: 2px solid red;
+}
+
+#isReadBtn {
+  align-items: center;
+  background-color: lightgreen;
+  border-radius: 20px;
+  width: 10vw;
+  margin: 2vw;
+}
+
+#submitBtn {
+  align-items: center;
+  background-color: khaki;
+  border-radius: 20px;
+  width: 10vw;
+  margin: 2vw;
 }
 
 #results {
@@ -10,25 +54,32 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 30vw);
   grid-gap: 2vw;
-  min-height: 30vh;
+  min-height: 100vh;
+  margin-top: 11vh;
 }
 
 .bookCard {
   min-width: 20vw;
+  max-height: 30vh;
+  min-height: 50vh;
   border: 2px solid black;
   padding: 1vw;
   margin: 1vw;
+  /*display: grid;
+  grid-template-columns: repeat(1, 20vw);
+   align-items: center; */
 }
 
 .bookCard p {
   min-width: 20vw;
+  min-height: 3vh;
   border: 2px solid green;
+  border-radius: 9px;
   padding: 1vw;
   margin: 1vw;
 }
 
 .titleName {
-  min-width: 20vw;
   border: 2px solid green;
   padding: 1vw;
   margin: 1vw;
@@ -47,6 +98,28 @@ body {
 }
 
 .readYet {
+  min-width: 15vw;
+  font-size: large;
+  background-color: lightgreen;
+  padding: 1vw;
+  margin: 1vw;
+  border: 2px black solid;
+  justify-content: center;
+}
+
+.notRead {
+  min-width: 15vw;
+  font-size: large;
+  background-color: lightcoral;
+  padding: 1vw;
+  margin: 1vw;
+  border: 2px black solid;
+}
+
+.trashCard {
+  min-width: 5vw;
+  min-height: auto;
+  font-size: large;
   padding: 1vw;
   margin: 1vw;
   border: 2px black solid;

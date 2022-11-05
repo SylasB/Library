@@ -3,10 +3,11 @@ let library = [];
 function book(title, author, pages, read) {
 }
 
-const inputBtn = document.getElementById("authorBtn");
+const submitBtn = document.getElementById("submitBtn");
 const results = document.getElementById("results");
+const readBtn = document.getElementById("readYet");
 
-inputBtn.addEventListener("click", e => {
+submitBtn.addEventListener("click", e => {
 const bookCard =document.createElement('div');
     bookCard.classList.add('bookCard');
 
@@ -34,13 +35,41 @@ const pagesNum = document.createElement('p');
     bookCard.appendChild(pagesNum);
 
 const readYet = document.createElement('button');
-    readYet.classList.add('readYet');
-    readYet.textContent = 'Read'
+    readYet.classList.add('notRead');
+    readYet.textContent = 'Not Read'
     
 
     bookCard.appendChild(readYet);
-})
+    readYet.onclick = function(){
+        this.classList.toggle('readYet');
+        this.classList.toggle('notRead');
+        if (readYet.classList == 'readYet') {
+            this.textContent = 'Read';
+        } 
+        else {
+            this.textContent = 'Not Read'
+        }
+    };
 
+const trashCard = document.createElement('button');
+    trashCard.classList.add('trashCard');
+    trashCard.innerHTML = " <img src = \'icons8-trash-can-50.png\' alt = \'Trash can Image\'>";    
+    
+    bookCard.appendChild(trashCard);
+});
+
+function readToggle() {
+  //document.getElementById("readYet").classList.toggle('notRead');
+    readBtn.classList.toggle('notRead');
+    readBtn.classList.toggle('readYet');
+}
+
+
+
+//readBtn.addEventListener('click', function(){
+    //this.classList.toggle('notRead');
+    //this.classList.toggle('readYet');
+//})
 
 function addBookToLibrary() {
     
