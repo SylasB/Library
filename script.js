@@ -56,6 +56,10 @@ const trashCard = document.createElement('button');
     trashCard.innerHTML = " <img src = \'icons8-trash-can-50.png\' alt = \'Trash can Image\'>";    
     
     bookCard.appendChild(trashCard);
+    trashCard.onclick = function() {
+        this.parentNode.remove(this);
+    }
+
 });
 
 function readToggle() {

@@ -65,6 +65,7 @@ header {
   border: 2px solid black;
   padding: 1vw;
   margin: 1vw;
+
   /*display: grid;
   grid-template-columns: repeat(1, 20vw);
    align-items: center; */
@@ -123,4 +124,32 @@ header {
   padding: 1vw;
   margin: 1vw;
   border: 2px black solid;
+}
+
+.contact {
+  padding: 1vw;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.contact a {
+  text-decoration: none;
+  color: black;
+}
+
+i {
+  font-size: x-large;
+}
+
+.devicon-github-original-wordmark {
+  animation: rotate 1.2s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
