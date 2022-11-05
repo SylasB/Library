@@ -30,7 +30,7 @@ const authorName = document.createElement('p');
 const pagesNum = document.createElement('p');
     var userInputNumPages = document.getElementById("numPages").value;
     pagesNum.classList.add('pagesNum');
-    pagesNum.textContent = userInputNumPages + ' ' + 'pages';
+    pagesNum.textContent = userInputNumPages + ' ' + 'Pages';
 
     bookCard.appendChild(pagesNum);
 

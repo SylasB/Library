@@ -13,25 +13,28 @@
         <h1>Welcome to your personal library</h1>
     </header>
     <div class="createBookCard">
-        <div>
-            <label for="bookTitle">Title:</label>
-            <input id="bookTitle" type="text">
-        </div>
-        <div>
-            <label for="authorText">Author:</label>
-            <input id="authorText" type="text">
-        </div>
-        <div>
-            <label for="">Number of pages:</label>
-            <input id="numPages" type="number">
-        </div>
-        <!--To be determined if this button should be used-->
-        <!--<div>
-            <button id="isReadBtn" value="Read" onclick="">Read</button>
-        </div>-->
-        <div>
-            <button id="submitBtn">Submit</button>
-        </div>
+        <span id="bookCardInputs">
+            <div class="titleInput">
+                <label for="bookTitle">Title:</label>
+                <input id="bookTitle" type="text">
+            </div>
+            <div class="authorInput">
+                <label for="authorText">Author:</label>
+                <input id="authorText" type="text">
+            </div>
+            <div class="pagesInput">
+                <label for="">Number of pages:</label>
+                <input id="numPages" type="number">
+            </div>
+            <!--To be determined if this button should be used-->
+            <!--<div>
+                <button id="isReadBtn" value="Read" onclick="">Read</button>
+            </div>-->
+            <div class="submitContainer">
+                <button id="submitBtn">Submit</button>
+            </div>
+        </span>
+    </div>
     </div>
     <div id="results">
         
@@ -39,7 +42,7 @@
     <div class="contact">
         <p>
             Copyright 2022 <a href="https://github.com/SylasB" target="blank">Sylas Boniek   
-                <i class="devicon-github-original-wordmark colored"></i></a>
+                <i class="devicon-github-original-wordmark colored" id="gitHubIcon"></i></a>
         </p>
     </div>
    
