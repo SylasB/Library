@@ -36,7 +36,7 @@ const pagesNum = document.createElement('p');
 
 const readYet = document.createElement('button');
     readYet.classList.add('notRead');
-    readYet.textContent = 'Not Read'
+    readYet.textContent = 'Not Read Yet'
     
 
     bookCard.appendChild(readYet);

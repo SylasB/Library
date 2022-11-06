@@ -18,6 +18,37 @@ header {
   position: absolute;
   top: 0;
   color: black;
+  font-size: large;
+  text-align: left;
+  padding-left: 3vw;
+}
+
+.addBookButtonContainer {
+  margin-top: 11vh;
+}
+
+.addBookButtonContainer img {
+  min-height: 3vh;
+}
+
+#addBookButton {
+  align-items: end;
+  background-color: khaki;
+  border-radius: 2vw;
+  width: 15vw;
+  min-height: 10vh;
+  margin: 2vw;
+  justify-content: center;
+  border: 3px solid #412126;
+  font-size: x-large;
+  font-weight: 400;
+  color: #412126;
+}
+
+#addBookButton:active {
+  transform: translate(0px, 5px);
+  -webkit-transform: translate(0px, 5px);
+  box-shadow: 0px 1px 0px 0px;
 }
 
 .createBookCard {
@@ -26,7 +57,7 @@ header {
   display: flex;
   justify-content: center;
 
-  margin-top: 11vh;
+  /* margin-top: 11vh; */
 }
 
 #bookCardInputs {
@@ -37,7 +68,7 @@ header {
   border: 5px solid #412126;
   border-radius: 2vw;
   background-color: #b68552;
-  max-width: 26vw;
+  max-width: 30vw;
   min-height: 45vh;
   max-height: 45vh;
   font-size: x-large;
@@ -47,7 +78,7 @@ header {
 }
 
 #bookCardInputs div {
-  max-width: 25vw;
+  max-width: 29vw;
   max-height: 40vh;
   padding: 1vh;
 
@@ -67,7 +98,9 @@ header {
 #numPages {
   min-height: 3vh;
   min-width: 12vw;
+  border: 2px solid #412126;
   color: #412126;
+  font-size: medium;
 }
 
 .createBookCard div div {
@@ -97,11 +130,14 @@ header {
   align-items: end;
   background-color: khaki;
   border-radius: 2vw;
-  width: 10vw;
-  min-height: 4vh;
+  width: 15vw;
+  min-height: 10vh;
   margin: 2vw;
   justify-content: center;
-  border: 2px solid black;
+  border: 3px solid #412126;
+  font-size: x-large;
+  font-weight: 400;
+  color: #412126;
 }
 
 #submitBtn:active {
@@ -111,7 +147,6 @@ header {
 }
 
 #results {
-  border: 2px solid red;
   justify-content: center;
   display: grid;
   grid-template-columns: repeat(3, 30vw);
@@ -122,8 +157,8 @@ header {
 .bookCard {
   min-width: 20vw;
   max-height: 30vh;
-  min-height: 50vh;
-  border: 2px solid black;
+  min-height: 45vh;
+  border: 3px solid #412126;
   background-color: #b68552;
   border-radius: 2vw;
   padding: 1vw;
@@ -137,15 +172,16 @@ header {
 .bookCard p {
   min-width: 20vw;
   min-height: 3vh;
-  border: 2px solid green;
+
   border-radius: 9px;
   padding: 1vw;
   margin: 1vw;
   font-size: x-large;
+  text-align: center;
 }
 
 .titleName {
-  border: 2px solid green;
+  text-decoration: underline;
   padding: 1vw;
   margin: 1vw;
   font-weight: bolder;
@@ -154,13 +190,11 @@ header {
 .authorName {
   padding: 1vw;
   margin: 1vw;
-  border: 2px black solid;
 }
 
 .pagesNum {
   padding: 1vw;
   margin: 1vw;
-  border: 2px black solid;
 }
 
 .readYet {
@@ -169,7 +203,9 @@ header {
   background-color: lightgreen;
   padding: 1vw;
   margin: 1vw;
-  border: 2px black solid;
+  font-size: large;
+  font-weight: bold;
+  border: 3px solid #412126;
   justify-content: center;
 }
 
@@ -179,7 +215,9 @@ header {
   background-color: lightcoral;
   padding: 1vw;
   margin: 1vw;
-  border: 2px black solid;
+  border: 3px #412126 solid;
+  font-size: large;
+  font-weight: bold;
 }
 
 .trashCard {
@@ -188,7 +226,7 @@ header {
   font-size: large;
   padding: 1vw;
   margin: 1vw;
-  border: 2px black solid;
+  border: 3px #412126 solid;
 }
 
 .trashCard:active {
