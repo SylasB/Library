@@ -60,6 +60,10 @@ header {
   /* margin-top: 11vh; */
 }
 
+.createBookCardNone {
+  visibility: hidden;
+}
+
 #bookCardInputs {
   display: grid;
 

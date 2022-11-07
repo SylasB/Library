@@ -6,9 +6,17 @@ function book(title, author, pages, read) {
 const submitBtn = document.getElementById("submitBtn");
 const results = document.getElementById("results");
 const readBtn = document.getElementById("readYet");
+const addBookBtn = document.getElementById("addBookButton");
+
+addBookBtn.addEventListener("click", e => {
+const addBookCard = document.getElementsByClassName("createBookCardNone");
+    addBookCard.classList.toggle("createBookCardNone");
+    addBookCard.classList.toggle("createBookCard");
+    console.log('test');
+})
 
 submitBtn.addEventListener("click", e => {
-const bookCard =document.createElement('div');
+const bookCard = document.createElement('div');
     bookCard.classList.add('bookCard');
 
     results.appendChild(bookCard);
