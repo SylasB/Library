@@ -62,6 +62,8 @@ header {
 
 .createBookCardNone {
   visibility: hidden;
+  position: absolute;
+  top: -99999px;
 }
 
 #bookCardInputs {

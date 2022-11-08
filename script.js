@@ -7,68 +7,79 @@ const submitBtn = document.getElementById("submitBtn");
 const results = document.getElementById("results");
 const readBtn = document.getElementById("readYet");
 const addBookBtn = document.getElementById("addBookButton");
+const createBookCardNone = document.getElementById("createBookCardNone");
 
 addBookBtn.addEventListener("click", e => {
-const addBookCard = document.getElementsByClassName("createBookCardNone");
-    addBookCard.classList.toggle("createBookCardNone");
-    addBookCard.classList.toggle("createBookCard");
-    console.log('test');
+    const createBookCardNone = document.getElementById("createBookCardNone");
+if (createBookCardNone.classList == 'createBookCardNone') {
+    createBookCardNone.classList.toggle('createBookCardNone');
+    createBookCardNone.classList.toggle('createBookCard');
+} else {
+    createBookCardNone.classList.toggle('createBookCardNone');
+    createBookCardNone.classList.toggle('createBookCard');
+}
 })
 
 submitBtn.addEventListener("click", e => {
-const bookCard = document.createElement('div');
-    bookCard.classList.add('bookCard');
+    const bookCard = document.createElement('div');
+        bookCard.classList.add('bookCard');
 
-    results.appendChild(bookCard);
+        results.appendChild(bookCard);
 
-const titleName = document.createElement('p');
-    var userInputTitle = document.getElementById("bookTitle").value;
-   titleName.classList.add('titleName');
-   titleName.textContent =  userInputTitle;
+    const titleName = document.createElement('p');
+        var userInputTitle = document.getElementById("bookTitle").value;
+    titleName.classList.add('titleName');
+    titleName.textContent =  userInputTitle;
 
-   bookCard.appendChild(titleName);
+    bookCard.appendChild(titleName);
 
-const authorName = document.createElement('p');
-    var userInputAuthor = document.getElementById("authorText").value;
-   authorName.classList.add('authorName');
-   authorName.textContent = userInputAuthor;
+    const authorName = document.createElement('p');
+        var userInputAuthor = document.getElementById("authorText").value;
+    authorName.classList.add('authorName');
+    authorName.textContent = userInputAuthor;
 
-   bookCard.appendChild(authorName);
+    bookCard.appendChild(authorName);
 
-const pagesNum = document.createElement('p');
-    var userInputNumPages = document.getElementById("numPages").value;
-    pagesNum.classList.add('pagesNum');
-    pagesNum.textContent = userInputNumPages + ' ' + 'Pages';
+    const pagesNum = document.createElement('p');
+        var userInputNumPages = document.getElementById("numPages").value;
+        pagesNum.classList.add('pagesNum');
+        pagesNum.textContent = userInputNumPages + ' ' + 'Pages';
 
-    bookCard.appendChild(pagesNum);
+        bookCard.appendChild(pagesNum);
 
-const readYet = document.createElement('button');
-    readYet.classList.add('notRead');
-    readYet.textContent = 'Not Read Yet'
-    
-
-    bookCard.appendChild(readYet);
-    readYet.onclick = function(){
-        this.classList.toggle('readYet');
-        this.classList.toggle('notRead');
-        if (readYet.classList == 'readYet') {
-            this.textContent = 'Read';
+    const readYet = document.createElement('button');
+        readYet.classList.add('notRead');
+        readYet.textContent = 'Not Read Yet'
+        
+        bookCard.appendChild(readYet);
+        readYet.onclick = function(){
+            this.classList.toggle('readYet');
+            this.classList.toggle('notRead');
+            if (readYet.classList == 'readYet') {
+                this.textContent = 'Read';
+            } 
+            else {
+                this.textContent = 'Not Read';
+            }
         } 
-        else {
-            this.textContent = 'Not Read'
+    const trashCard = document.createElement('button');
+        trashCard.classList.add('trashCard');
+        trashCard.innerHTML = " <img src = \'icons8-trash-can-50.png\' alt = \'Trash can Image\'>";    
+        
+        bookCard.appendChild(trashCard);
+        trashCard.onclick = function() {
+            this.parentNode.remove(this);
         }
-    };
+    })
 
-const trashCard = document.createElement('button');
-    trashCard.classList.add('trashCard');
-    trashCard.innerHTML = " <img src = \'icons8-trash-can-50.png\' alt = \'Trash can Image\'>";    
-    
-    bookCard.appendChild(trashCard);
-    trashCard.onclick = function() {
-        this.parentNode.remove(this);
-    }
 
-});
+submitBtn.addEventListener("click", e => {
+    const createBookCardNone = document.getElementById("createBookCardNone");   
+    if (createBookCardNone.classList == 'createBookCard') {
+        createBookCardNone.classList.toggle('createBookCardNone');
+        createBookCardNone.classList.toggle('createBookCard');
+    } 
+})  
 
 function readToggle() {
   //document.getElementById("readYet").classList.toggle('notRead');
