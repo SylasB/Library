@@ -99,3 +99,9 @@ function addBookToLibrary() {
 }
 
 //const story = new addBookToLibrary('Tolkein', 'hobbit', '295', 'yes'); 
+
+function showLogIn() {
+    const form = document.getElementById('signInForm');
+
+    form.classList.toggle('hidden');
+};

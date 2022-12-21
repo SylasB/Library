@@ -10,8 +10,8 @@ body {
 }
 
 header {
-  width: 100vw;
-  min-height: 10vh;
+  width: 100%;
+  min-height: 12vh;
   background-color: #885742;
   margin-top: 0px;
   margin-left: 0px;
@@ -21,6 +21,53 @@ header {
   font-size: large;
   text-align: left;
   padding-left: 3vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.signInContainer {
+  height: 10vh;
+  width: 55vw;
+  position: relative;
+  border: 2px solid black;
+}
+
+.showForm {
+  border: 2px solid #412126;
+  background-color: #d1b25b;
+  padding: 1vw;
+  border-radius: 2vw;
+  font-size: x-large;
+  position: absolute;
+  top: 0;
+  right: 10vh;
+}
+
+#signInForm {
+  padding: 2vw;
+  font-size: x-large;
+}
+
+#signInForm button {
+  color: #412126;
+  background-color: #d1b25b;
+  border-radius: 1vw;
+  width: 5vw;
+  font-size: medium;
+}
+
+input:invalid {
+  height: 3vh;
+  outline: none;
+  border-color: red;
+  box-shadow: 0 0 10px red;
+}
+
+input:valid {
+  height: 3vh;
+  outline: none;
+  border-color: lightgreen;
+  box-shadow: 0 0 10px lightgreen;
 }
 
 .addBookButtonContainer {
@@ -262,4 +309,8 @@ i {
 
 #gitHubIcon:hover {
   transform: rotate(360deg) scale(1.2);
+}
+
+.hidden {
+  display: none;
 }

@@ -11,6 +11,14 @@
 <body>
     <header>
         <h1>Welcome to your personal library</h1>
+            <p class="showForm" onclick="showLogIn()">Sign In</p>
+            <form id="signInForm" class="hidden" onsubmit="event.preventDefault(); showLogIn()">
+                    <label for="username">Username: </label>
+                <input type="text" name="username" id="username" placeholder="Username" required>
+                    <label for="password">Password: </label>
+                <input type="text" name="password" id="password" placeholder="Password" minlength="8" required>
+                <button type="submit">Sign In</button>
+            </form>
     </header>
     <div class="addBookButtonContainer">
         <button id="addBookButton"><img src="./images/PlusSign.png" alt="Plus Sign"> Add Book </button>
